@@ -1,7 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myfirstdevopsappdeployment
+  name: myapp-deployment
+  labels:
+    app: myapp
 spec:
   replicas: 2
   selector:
@@ -13,7 +15,7 @@ spec:
         name: myapp
     spec:
       containers:
-      - name: myapp
-        image: 0lleol0/Pipeline-K8s:latest
+      - name: myapp-container
+        image: 0lleol0/cafe-app:latest
         ports:
         - containerPort: 80
