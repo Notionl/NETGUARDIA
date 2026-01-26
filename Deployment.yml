@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: 0lLeol0/Pipeline-K8s:latest
+        image: 0lleol0/Pipeline-K8s:latest
         ports:
         - containerPort: 80
